@@ -59,7 +59,7 @@ def above65years():
 
 def above65years_notfromnordicCountries():
     mask = (bef_stats_df[:, 0] == 2015) & (
-        bef_stats_df[:, 2] > 65) & (bef_stats_df[:, 3] != 5100) & (bef_stats_df[:, 3] != 5101) & (bef_stats_df[:, 3] != 5104) & (bef_stats_df[:, 3] != 5110) & (bef_stats_df[:, 3] != 5120) & (bef_stats_df[:, 3] != 5106)
+        bef_stats_df[:, 2] > 65) & (bef_stats_df[:, 3] == 5101) & (bef_stats_df[:, 3] == 5104) & (bef_stats_df[:, 3] == 5110) & (bef_stats_df[:, 3] == 5120) & (bef_stats_df[:, 3] == 5106)
     print('sum of all the pople above 65 years old and not from nordic countries\n',
           np.sum(bef_stats_df[mask][:, 4]))
 
